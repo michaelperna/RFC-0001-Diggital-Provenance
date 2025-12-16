@@ -57,7 +57,7 @@ graph TD
     end
     
     G -->|Query| I[Client: Navigable Timeline]
-
+```
 ### 4.2 The "No Blockchain" Consensus
 
 DPP prioritizes query speed and graph traversability over decentralized censorship resistance.
