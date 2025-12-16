@@ -99,8 +99,8 @@ The core of the protocol is the Mile Marker. Below is the proposed JSON schema.
 To illustrate the protocol, consider the Pizza Trend Strand.
 
 - **Node A (1985):** A user submits a newspaper clipping about Hawaiian pizza.
-- - *Sentiment:* "Radical," "Unusual."
-- - *Vector:* Located near "Novelty Food."
+    - - *Sentiment:* "Radical," "Unusual."
+    - - *Vector:* Located near "Novelty Food."
 
 - **Node B (2005):** A user submits a blog post about ordering pizza for a party.
 - - *Sentiment:* "Standard," "Accepted."
