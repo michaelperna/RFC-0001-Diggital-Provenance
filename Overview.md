@@ -2,18 +2,18 @@
 | :--- | :--- |
 | **Title** | Digital Provenance Protocol (DPP): A Standard for Temporal Semantic Anchoring |
 | **Status** | Draft / Request for Comments |
-| **Author** | [Your Name/Handle] |
+| **Author** | Michael CP |
 | **Created** | 2025-12-10 |
 | **License** | MIT / CC-BY-4.0 |
 
 ## 1. Abstract
 
-The **Digital Provenance Protocol (DPP)** is a system design for anchoring digital content in time, preserving not only the content itself but the semantic context ("zeitgeist") of the moment it was captured. Unlike traditional archiving, which takes static snapshots of data, DPP treats content as **Mile Markers**—nodes in a navigable, temporal graph. This allows systems to trace the evolution of public discourse and sentiment around specific topics (e.g., a culinary trend or political event) over decades. This specification outlines a centralized, verifiable ledger system using Merkle structures rather than blockchain consensus to ensure high-throughput queryability and integrity.
+The **Digital Provenance Protocol (DPP)** is a system design for anchoring digital content in time, preserving not only the content itself but the semantic context ("zeitgeist") of the moment it was captured. Unlike traditional archiving, which takes static snapshots of data, DPP treats content as **Mile Markers**; nodes in a navigable, temporal graph. This allows systems to trace the evolution of public discourse and sentiment around specific topics (e.g., a culinary trend or political event) over decades. This specification outlines a centralized, verifiable ledger system using Merkle structures to ensure high-throughput queryability and integrity.
 
 ## 2. Problem Statement
 
-### 2.1 The Context Decay
-The current internet suffers from "Context Decay." When a user retrieves an archived URL from 10 years ago, they view the content through the lens of the present day. The metadata of that era—how the content was received, its controversy level, and its relationship to other concurrent events—is lost.
+### 2.1 Context Decay
+The current internet suffers from "Context Decay." When a user retrieves an archived URL from 10 years ago, they view the content through the lens of the present day. The metadata of that era, how the content was received, its controversy level, and its relationship to other concurrent events, is lost.
 
 ### 2.2 Static vs. Semantic History
 Tools like the Wayback Machine preserve the *presentation layer* (pixels and text). However, there is no standard protocol for preserving the *semantic layer* (sentiment, cultural significance, and vector embeddings) at a specific point in time (`t_0`).
