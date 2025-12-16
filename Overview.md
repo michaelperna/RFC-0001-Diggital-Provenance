@@ -62,9 +62,9 @@ graph TD
 
 DPP prioritizes query speed and graph traversability over decentralized censorship resistance.
 
-    Integrity: We utilize a Merkle DAG (Directed Acyclic Graph) similar to Git. Every Mile Marker contains the hash of the previous marker in its Strand. To alter a record in 1985, one would have to recompute the hashes of every subsequent record up to the present day.
+***Integrity:*** We utilize a Merkle DAG (Directed Acyclic Graph) similar to Git. Every Mile Marker contains the hash of the previous marker in its Strand. To alter a record in 1985, one would have to recompute the hashes of every subsequent record up to the present day.
 
-    Performance: By avoiding Proof-of-Work or Proof-of-Stake, the system allows for real-time ingestion and instant graph traversal.
+Performance: By avoiding Proof-of-Work or Proof-of-Stake, the system allows for real-time ingestion and instant graph traversal.
 
 ### 5. Data Specification
 
@@ -98,11 +98,9 @@ The core of the protocol is the Mile Marker. Below is the proposed JSON schema.
 
 To illustrate the protocol, consider the Pizza Trend Strand.
 
-    **Node A (1985):** A user submits a newspaper clipping about Hawaiian pizza.
-
-        *Sentiment:* "Radical," "Unusual."
-
-        *Vector:* Located near "Novelty Food."
+**Node A (1985):** A user submits a newspaper clipping about Hawaiian pizza.
+*Sentiment:* "Radical," "Unusual."
+*Vector:* Located near "Novelty Food."
 
     **Node B (2005):** A user submits a blog post about ordering pizza for a party.
 
@@ -126,4 +124,4 @@ To illustrate the protocol, consider the Pizza Trend Strand.
 
     **Tombstoning:** A privacy-compliant method for redacting "Gems" (e.g., right to be forgotten) while maintaining the integrity of the hash chain (replacing content with a null value but keeping the hash).
 
-    [!NOTE] This specification is a living document. Contributions regarding the vectorization schema are welcome in the issues tab.
+>[!NOTE] This specification is a living document. Contributions regarding the vectorization schema are welcome in the issues tab.
