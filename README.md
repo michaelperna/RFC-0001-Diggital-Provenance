@@ -57,3 +57,66 @@ graph TD
     end
     
     G -->|Query| I[Client: Navigable Timeline]
+```
+### 4.2 The "No Blockchain" Consensus
+
+DPP prioritizes query speed and graph traversability over decentralized censorship resistance.
+
+**Integrity:** We utilize a Merkle DAG (Directed Acyclic Graph) similar to Git. Every Mile Marker contains the hash of the previous marker in its Strand. To alter a record in 1985, one would have to recompute the hashes of every subsequent record up to the present day.
+
+Performance: By avoiding Proof-of-Work or Proof-of-Stake, the system allows for real-time ingestion and instant graph traversal.
+
+## 5. Data Specification
+
+The core of the protocol is the Mile Marker. Below is the proposed JSON schema.
+
+```
+{
+  "marker_id": "mm_uuid_v4",
+  "schema_version": "1.0",
+  "timestamp": "1985-10-26T09:00:00Z",
+  "gem": {
+    "original_url": "[https://example.com/article/pizza-trends](https://example.com/article/pizza-trends)",
+    "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "media_type": "text/html"
+  },
+  "semantic_context": {
+    "topics": ["pizza", "pineapple", "culinary_trends"],
+    "sentiment_score": -0.8, 
+    "sentiment_label": "controversial",
+    "zeitgeist_summary": "Public discourse frames pineapple on pizza as a radical, largely unpopular deviation from tradition.",
+    "vector_embedding": [0.124, -0.982, 0.004, "...", 0.551]
+  },
+  "provenance": {
+    "previous_marker_hash": "sha256:89723...", 
+    "contributor_id": "user_123"
+  }
+}
+```
+
+## 6. Usage Example: The "Pizza Strand"
+
+To illustrate the protocol, consider the Pizza Trend Strand.
+
+- **Node A (1985):** A user submits a newspaper clipping about Hawaiian pizza.
+    - *Sentiment:* "Radical," "Unusual."
+    - *Vector:* Located near "Novelty Food."
+
+- **Node B (2005):** A user submits a blog post about ordering pizza for a party.
+    - *Sentiment:* "Standard," "Accepted."
+    - *Vector:* Located near "Fast Food Staples."
+    - *Link:* Node B references Node A as a historical predecessor.
+
+- **Node C (2024):** A viral video debating toppings.
+    - *Sentiment:* "Meme," "Divisive."
+    - *Vector:* Located near "Internet Culture."
+
+**Query Result:** A client querying this Strand does not just see three links. They receive a **Gradient of Acceptance**, visualizing how the concept moved from "Novelty" to "Staple" to "Meme" over 40 years.
+
+## 7. Future Work
+
+- **Federation:** allowing different DPP servers to cross-reference Strands.
+
+- **Tombstoning:** A privacy-compliant method for redacting "Gems" (e.g., right to be forgotten) while maintaining the integrity of the hash chain (replacing content with a null value but keeping the hash).
+
+>**NOTE** This specification is a living document. Contributions regarding the vectorization schema are welcome in the issues tab.
