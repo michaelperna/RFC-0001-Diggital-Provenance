@@ -70,7 +70,7 @@ DPP prioritizes query speed and graph traversability over decentralized censorsh
 
 The core of the protocol is the Mile Marker. Below is the proposed JSON schema.
 
-```json
+```
 {
   "marker_id": "mm_uuid_v4",
   "schema_version": "1.0",
@@ -92,4 +92,4 @@ The core of the protocol is the Mile Marker. Below is the proposed JSON schema.
     "contributor_id": "user_123"
   }
 }
-
+```
