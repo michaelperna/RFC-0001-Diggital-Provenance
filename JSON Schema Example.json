@@ -1,0 +1,21 @@
+{
+  "marker_id": "mm_uuid_v4",
+  "schema_version": "1.0",
+  "timestamp": "1985-10-26T09:00:00Z",
+  "gem": {
+    "original_url": "[https://example.com/article/pizza-trends](https://example.com/article/pizza-trends)",
+    "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "media_type": "text/html"
+  },
+  "semantic_context": {
+    "topics": ["pizza", "pineapple", "culinary_trends"],
+    "sentiment_score": -0.8, 
+    "sentiment_label": "controversial",
+    "cultural_summary": "Public discourse frames pineapple on pizza as a radical, largely unpopular deviation from tradition.",
+    "vector_embedding": [0.124, -0.982, 0.004, "...", 0.551]
+  },
+  "provenance": {
+    "previous_marker_hash": "sha256:89723...", 
+    "contributor_id": "user_123"
+  }
+}
