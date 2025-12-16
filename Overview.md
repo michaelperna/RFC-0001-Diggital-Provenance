@@ -99,17 +99,17 @@ The core of the protocol is the Mile Marker. Below is the proposed JSON schema.
 To illustrate the protocol, consider the Pizza Trend Strand.
 
 - **Node A (1985):** A user submits a newspaper clipping about Hawaiian pizza.
-    - - *Sentiment:* "Radical," "Unusual."
-    - - *Vector:* Located near "Novelty Food."
+    - *Sentiment:* "Radical," "Unusual."
+    - *Vector:* Located near "Novelty Food."
 
 - **Node B (2005):** A user submits a blog post about ordering pizza for a party.
-- - *Sentiment:* "Standard," "Accepted."
-- - *Vector:* Located near "Fast Food Staples."
-- - *Link:* Node B references Node A as a historical predecessor.
+    - *Sentiment:* "Standard," "Accepted."
+    - *Vector:* Located near "Fast Food Staples."
+    - *Link:* Node B references Node A as a historical predecessor.
 
 - **Node C (2024):** A viral video debating toppings.
-- - *Sentiment:* "Meme," "Divisive."
-- - *Vector:* Located near "Internet Culture."
+    - *Sentiment:* "Meme," "Divisive."
+    - *Vector:* Located near "Internet Culture."
 
 **Query Result:** A client querying this Strand does not just see three links. They receive a **Gradient of Acceptance**, visualizing how the concept moved from "Novelty" to "Staple" to "Meme" over 40 years.
 
